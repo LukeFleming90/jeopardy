@@ -1,0 +1,48 @@
+.container {
+    text-align: center;
+    border: solid black 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    justify-content: space-around;
+    background-color: rgb(95,158,160);
+}
+
+.title {
+    text-align: center;
+    color: white;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+}
+
+.decrease {
+    background-color: lightcoral;
+    margin-right: 50px;
+    border: none;
+}
+
+.increase {
+    background-color: lightblue;
+    margin-right: 50px;
+    border: none;
+}
+
+.reset {
+    background-color: darkred;
+    border: none;
+}
+
+.question {
+    color: lightgoldenrodyellow;
+}
