@@ -17,7 +17,7 @@ export default function HomePage(props) {
             const response = await fetch(url);
             const data = await response.json();
             setQuestion(data);
-        } catch(e) {
+        } catch (e) {
             console.error(e)
         }
     };
@@ -29,24 +29,26 @@ export default function HomePage(props) {
     return (
         <>
             {
-                question.map((item,idx) => {
+                question.map((item, idx) => {
                     return (
                         <div className="container">
-                            <div key={idx}>                               
-                                <h1 className="title">Welcome to Jeopardy!</h1>
-                                <h2>Score: {score}</h2>
-                                <div className="buttonContainer">
-                                    <button className="decrease" onClick={() => { return handleDecrease(item.value)}}>Decrease</button>
-                                    <button className="increase" onClick={() => { return handleIncrease(item.value)}}>Increase</button>
-                                    <button className="reset" onClick={() => { return setToZero()}}>Reset</button>
+                            <div className="subContainer">
+                                <div key={idx}>
+                                    <h1>Welcome to Jeopardy!</h1>
+                                    <h2>Score: <span className="textColor">{score}</span></h2>
+                                    <div className="buttonContainer">
+                                        <button className="decrease" onClick={() => { return handleDecrease(item.value) }}>Decrease</button>
+                                        <button className="increase" onClick={() => { return handleIncrease(item.value) }}>Increase</button>
+                                        <button className="reset" onClick={() => { return setToZero() }}>Reset</button>
+                                    </div>
+                                    <h2>Let's Play!</h2>
+                                    <button className="question" onClick={() => { getQuestion(); setDsply(true) }}>Get New Question</button>
+                                    <h2>Category: <span className="textColor">{item.category.title}</span></h2>
+                                    <h2>Points: <span className="textColor">{item.value}</span></h2>
+                                    <h2>Answer: <span className="textColor">{item.question}</span></h2>
+                                    <button className="answerButton" style={{ visibility: dsply ? 'visible' : 'hidden' }} onClick={() => { setDsply(false) }}>Click to Display Question</button>
+                                    <h2 style={{ visibility: dsply ? 'hidden' : 'visible' }}>Question: <span className="textColor">{item.answer}</span></h2>
                                 </div>
-                                <h2>Let's Play!</h2>
-                                <button className="question" onClick={() => { getQuestion(); setDsply(true)}}>Get Question</button>
-                                <h2>Category: {item.category.title}</h2>
-                                <h2>Points: {item.value}</h2>
-                                <h1>Answer: {item.question}</h1>
-                                <button style={{visibility: dsply ? 'visible' : 'hidden'}} onClick={() => { setDsply(false)}}>Click to Display Answer</button>
-                                <h1 style={{visibility: dsply ? 'hidden' : 'visible'}}>Question: {item.answer}</h1>
                             </div>
                         </div>
                     )

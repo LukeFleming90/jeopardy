@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ubuntu+Mono&display=swap');
+
 .container {
     text-align: center;
     border: solid black 5px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Ubuntu Mono', monospace;
     height: 100vh;
     display: flex;
     width: 1000px;
@@ -10,8 +13,24 @@
     background-color: rgb(95,158,160);
 }
 
-.title {
+.subContainer {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h1 {
     text-align: center;
+    color: white;
+    font-size: 60px;
+}
+
+h2 {
+    text-align: center;
+    color: lightyellow;
+    font-size: 40px;
+}
+
+.textColor {
     color: white;
 }
 
@@ -24,6 +43,8 @@
 button {
     height: 50px;
     width: 100px;
+    font-size: 20px;
+    border-radius: 12px;
 }
 
 .decrease {
@@ -44,5 +65,19 @@ button {
 }
 
 .question {
-    color: lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;
+    height: 50px;
+    width: 200px;
+    border: none;
+    color: black;
+    font-size: 20px;
+}
+
+.answerButton {
+    height: 100px;
+    width: 500px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    font-size: 30px;
 }
