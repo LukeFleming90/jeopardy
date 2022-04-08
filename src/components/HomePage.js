@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function HomePage(props) {
 
-    const url = `http://jservice.io/api/random`
+    const url = `https://jservice.io/api/random`
 
     const [question, setQuestion] = useState([]);
     const [score, setScore] = useState(0);
@@ -55,6 +55,6 @@ export default function HomePage(props) {
                 }
             </div>
         </div>
-        
+
             )
 }
