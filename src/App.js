@@ -1,5 +1,7 @@
-import { Route, Routes } from "react-router-dom";
+import './style.css'
 import HomePage from "./components/HomePage";
+import { Route, Routes } from "react-router-dom";
+
 
 export default function App(){
     return(
